@@ -13,19 +13,6 @@ def add_2_tracks(y1: ndarray, y2: ndarray):
         return y + y2
 
 
-def add_tracks(y1: ndarray, y2: ndarray, y3: ndarray = None, y4: ndarray = None, y5: ndarray = None):
-    y = add_2_tracks(y1, y2)
-    if y3 is None:
-        return y
-    y = add_2_tracks(y, y3)
-    if y4 is None:
-        return y
-    y = add_2_tracks(y, y4)
-    if y5 is None:
-        return y
-    return add_2_tracks(y, y5)
-
-
 def insert_to_track(y: ndarray, ins: ndarray, n: int):
     if n < 0:
         raise ValueError
